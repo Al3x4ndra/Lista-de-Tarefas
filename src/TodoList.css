@@ -1,0 +1,154 @@
+/*DARK MODE*/
+
+body {
+    background: #191a1b;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus {
+    /*Retira a linha de marcação quando passa o mouse sobre o input*/
+    outline: none;
+}
+
+h1 {
+    font-weight: 900; /*Espessura da fonte*/
+    color: #7399d6;
+    text-align: center;
+    margin: 35px auto;
+    /*Aumentar o espaçamento no topo*/
+}
+
+form {
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 60px;
+    margin: 30px auto;/*Alinha no centro com auto, na direita e esquerda tem 30px de margem*/
+    margin-bottom: 60px;/*Margem embaixo maior*/
+}
+
+input {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: #27292e;
+    border-style:dashed;/*Borda estilizada*/
+    padding-left: 30px;/*Itens centralizados*/
+    font-size: 16px;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+button.add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #7399d6;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    padding: 10px 25px;
+    height: 66px;
+    border-top-right-radius: 10px;/*Canto superior direito arredondado*/
+    border-bottom-right-radius: 10px;/*Canto inferior direito arredondado*/
+}
+
+button.add:hover {/*Faz o botão se destacar quando é clicado*/
+    color: aliceblue;
+    background: #4d6eb6;
+}
+
+.listaTarefas {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;/*Faz os elementos ficarem em colunas*/
+    width: 600px;
+    margin: auto;
+    background: #191a1b;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;/*Espaço uniforme entre eles*/
+    border: 2px dashed #4e535f;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item:hover{
+    background-color: #040405;
+}
+
+.item span {
+    text-align: start;
+    width: 100%;
+    color: aliceblue;
+    margin-right: 10px;
+    padding: 10px 15px;
+}
+
+.item.completo {
+    display: flex;
+    justify-content: space-between;/*Espaço uniforme entre eles*/
+    background: #030303;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    opacity:0.5;
+}
+
+.item.completo span {
+    text-align: start;
+    width: 100%;
+    color: aliceblue;
+    margin-right:10px;
+    padding: 10px 15px;
+    text-decoration: line-through;
+}
+
+button.del{
+    background:none;
+    color:#c086ea;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button.del:hover{
+    background: #b12323;
+    color:aliceblue;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button.deleteAll{
+    border:1px solid#b12323;
+    background: none;
+    padding: 15px;
+    color: #ff5353;
+    font-weight: bold;
+    border-radius:5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+button.deleteAll:hover{
+    background: #b12323;
+    color: aliceblue;
+}
+
+.icone-central{
+    max-width: 100%;
+}
+
+/*QUANDO O TAMANHO DO PIXEL FOR DE 900 PARA BAIXO, VAI TER 100%*/
+@media screen and (max-width: 900px) {
+    form {
+        width: 100%;
+    }
+/*TELAS DE 900PX PARA BAIXO, OS INTENS FICAM CENTRALIZADOS*/
+    .listaTarefas {
+        width: 100%;
+    }
+}
